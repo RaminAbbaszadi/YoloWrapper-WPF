@@ -1,0 +1,13 @@
+/DeepLearning/Assets/Weights/
+/DeepLearning/bin/
+/ObjectDetectionGui/bin/
+*.suo
+*.sdf
+*.opensdf
+*.weights
+/ipch/
+/Palettes/
+/Release/
+/x64/
+/Debug/
+/.vs/
