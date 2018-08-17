@@ -8,8 +8,8 @@ WPF (C#) Yolo Darknet Wrapper, This package deliver all dependencies for cpu det
 ## Build requirements
 - Visual Studio 2017
 
-#How to use
-Just download yolov3.weights file from below address and copy into DeepLearning\Assets\Weights path, and compile both projects in Visual Studio 2017.
+## How to use
+-Just download yolov3.weights file from below address and copy into DeepLearning\Assets\Weights path, and compile both projects in Visual Studio 2017.
 
 ## Pre-Trained Dataset
 Model | Cfg | Weights | Names |
