@@ -1,0 +1,65 @@
+﻿<Window 
+        x:Class="ObjectDetectionGui.ObjectDetectionMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ObjectDatectionViews="clr-namespace:ObjectDetectionGui.Views"
+        Title="Object Detection"
+        Icon="ObjectDetection.png"
+        Style ="{StaticResource {x:Type Window}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <!--Grid For Browse Files and Show results-->
+        <Grid Grid.Row="0" Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!--Browser View-->
+            <GroupBox Header="Files Browse"  Grid.Row="0">
+                <Border Style="{StaticResource BorderStyle}">
+                    <ObjectDatectionViews:BrowserView/>
+                </Border>
+            </GroupBox>
+
+            <!--Result View-->
+            <GroupBox Header="Results" Grid.Row="1">
+                <Border Style="{StaticResource BorderStyle}">
+                    <ObjectDatectionViews:ResultView Grid.Row="1"/>
+                </Border>
+            </GroupBox>
+        </Grid>
+        
+        <!--Preview Image-->
+        <GroupBox Header="Preview" Grid.Row="0" Grid.Column="1" >
+            <Border Style="{StaticResource BorderStyle}">
+                <Grid x:Name="previewImageGrid">
+                    <Image x:Name="previweImage" Source="{Binding ImgSrc}"/>
+                    <Canvas x:Name="previewCanvas" Width="{Binding MainImage.ActualWidth}" Height="{Binding MainImage.ActualHeight}"/>
+                </Grid>
+            </Border>
+        </GroupBox>
+        
+        <!--Status Bar-->
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}" Margin="3">
+            <Grid x:Name="statusBarGrid" Margin="3">
+                <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" >
+                    <TextBlock x:Name="netInitialTextBlock" Text="{Binding NetInitilizeElapsedTime}"  VerticalAlignment="Center" Margin="5,0,25,0" />
+                    <TextBlock x:Name="detectionHardwareTextBlock" Text="{Binding NetHardware}" VerticalAlignment="Center" Margin="0,0,25,0" />
+                    <TextBlock x:Name="detectionTimeTextBlock"  Text="{Binding DetectionElapsedTime}"  VerticalAlignment="Center" Margin="0,0,25,0" />
+                </StackPanel>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</Window>

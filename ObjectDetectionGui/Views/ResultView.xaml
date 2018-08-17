@@ -1,0 +1,23 @@
+﻿<UserControl 
+    x:Class="ObjectDetectionGui.Views.ResultView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <Grid x:Name="LayoutRoot">
+         <DataGrid x:Name="ResultsDataGrid" ItemsSource="{Binding ResultModelList}" AutoGenerateColumns="False" 
+                   SelectionChanged="ResultsDataGrid_SelectionChanged">
+            
+             <DataGrid.Columns>
+                <DataGridTextColumn Header="Datection Label" Binding="{Binding DetectionLabel}" Width="90" />
+                <DataGridTextColumn Header="Confidence" Binding="{Binding Confidence, StringFormat={}{0:F3}}" Width="70" />
+                <DataGridTextColumn Header="Left Top X" Binding="{Binding DetectedBoxLeftTopX}" Width="70" />
+                <DataGridTextColumn Header="Left Top Y" Binding="{Binding DetectedBoxLeftTopY}" Width="70" />
+                <DataGridTextColumn Header="Width" Binding="{Binding DetectedBoxWidth}" Width="70" />
+                <DataGridTextColumn Header="Height" Binding="{Binding DetectedBoxHeight}" Width="70" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+    </Grid>
+
+</UserControl>
