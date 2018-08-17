@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\KocLogoDetection\Projects\ObjectDetection\ObjectDetectionGui\obj\Debug\
+D:\KocLogoDetection\Projects\ObjectDetection\YoloWrapper-WPF\ObjectDetectionGui\obj\Debug\
 LogoDetectionGui
 none
 false
 DEBUG;TRACE
-D:\KocLogoDetection\Projects\ObjectDetection\ObjectDetectionGui\App.xaml
+D:\KocLogoDetection\Projects\ObjectDetection\YoloWrapper-WPF\ObjectDetectionGui\App.xaml
 41451166694
 
 15596361007
-15-595560706
+15-240758365
 Assets\Styles\Styles.xaml;ObjectDetectionMainWindow.xaml;Views\BrowserView.xaml;Views\ResultView.xaml;
 
 False

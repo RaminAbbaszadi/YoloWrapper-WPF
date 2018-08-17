@@ -1,6 +1,10 @@
 # YoloWrapper-WPF
 WPF (C#) Yolo Darknet Wrapper, This package deliver all dependencies for cpu detection. Special thanks for [Alexey](https://github.com/AlexeyAB/darknet) that make cross-platform Windows and Linux version of YOLO.
 
+## Example result
+![Wrapper GUI with detection result](images/WrapperGUI.JPG)
+
+
 # System requirment
 - .NET Framework 4.6.1
 - [Microsoft Visual C++ 2017 Redistributable x64](https://go.microsoft.com/fwlink/?LinkId=746572)
